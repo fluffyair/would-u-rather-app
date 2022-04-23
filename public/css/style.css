@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@200&family=Passion+One&family=Sniglet&family=Titan+One&display=swap');
+
+:root {
+    --blue: rgb(0, 100, 200);
+    --red: rgb(209, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Sniglet', cursive;
+    font-weight: 100;
+}
+
+.left {
+    cursor: pointer;
+    position: absolute;
+    background-color: var(--blue);
+    height: 100vh;
+    width: 50%;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
+
+.left:hover {
+    opacity: 1;
+}
+
+.right {
+    cursor: pointer;
+    position: absolute;
+    background-color: var(--red);
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
+
+.right:hover {
+    opacity: 1;
+}
+
+.center {
+    position: relative;
+}
+
+.center .wyr {
+    z-index: 2;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: absolute;
+}
+
+.center .code {
+    font-family: 'Sniglet', cursive;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 6px 3px;
+    text-align: center;
+    z-index: 2;
+    width: 150px;
+    top: 230px;
+    border-radius: 8px;
+    box-shadow: none;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: absolute;
+}
+
+.left h2 {
+    position: relative;
+    top: 50%;
+    font-size: 2em;
+    transition-duration: 0.3s;
+}
+
+.right h2 {
+    position: relative;
+    top: 50%;
+    font-size: 2em;
+    transition-duration: 0.3s;
+}
+
+.right:hover > h2 { 
+    font-size: 2.5em;
+}
+
+.left:hover > h2 { 
+    font-size: 2.5em;
+}
+
+.create {
+    z-index: 2;
+    border: none;
+    position: absolute;
+    background-color: rgb(0, 135, 50);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 290px;
+    padding: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Sniglet', cursive;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+.create:hover {
+    background-color: rgb(0, 186, 68);
+}
+
+
+/* toast */
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(37, 37, 37);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 1;
+    left: 8%;
+    bottom: 2%;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 2%; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 2%; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 2%; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 2%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
+.progress{
+	width: 0%;
+	height: 30px;
+	background: #2c3e50;
+}
+
+/* ans */
+.circle-stat {
+    position: absolute;
+    z-index: 4;
+    font-size: 2.8em;
+    top: 0.4em;
+    left: 0.4em;
+    font-family: 'Sniglet', cursive;
+}
