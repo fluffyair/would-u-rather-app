@@ -11,7 +11,7 @@ const { createQuestion } = require('./utils/rounds');
 
 // server
 const app = express();
-const server = http.createServer(app)
+const server = http.createServer(app).listen(process.env.PORT || 5000)
 let port = 5000;
 
 // socket
@@ -178,5 +178,4 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(5000, () => { console.log('Server started:', port) })
 app.use(express.static(path.join(__dirname, 'public')));
