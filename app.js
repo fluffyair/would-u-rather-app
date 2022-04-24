@@ -96,7 +96,6 @@ io.on('connection', socket => {
             return true;
         });
 
-        console.log(fillt.length);
         socket.emit('loadAns', fillt.length, ans)
         io.in(room).emit('loadAns', fillt.length, ans);
     });
@@ -146,7 +145,6 @@ io.on('connection', socket => {
                     io.in(user.room).emit('giveResults', results);
         
                     setTimeout(() => {
-                        console.log('test');
                         let qs = createQuestion();
                         socket.emit('passQuestion', qs);
                         io.in(user.room).emit('passQuestion', qs);
@@ -175,6 +173,10 @@ io.on('connection', socket => {
             socket.emit('loadAns', fillt.length, ans)
             io.in(user.room).emit('loadAns', fillt.length, ans);        
         }
+    });
+
+    socket.on('pRoom', () => {
+        socket.emit('passRs', users);
     });
 });
 

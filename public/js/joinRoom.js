@@ -11,7 +11,6 @@ let right = document.querySelector('.right');
 
 
 socket.on('passQuestion', (question) => {
-    console.log('passed');
     setTimeout(() => {
         left.innerHTML = `<h2>${question[0]}<h2><div id="box"><p class="nbr"></p>`
         right.innerHTML = `<h2>${question[1]}<h2><div id="box"><p class="nbr"></p>`

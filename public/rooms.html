@@ -5,29 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/logo.png">
-    <title>WYR Menu</title>
+    <title>WYR Rooms</title>
     <meta name="description" content="Play what would you rather online with friends or family :)">
     <meta name="keywords" content="would you rather, wyr, wur, wyr game, wur game, would you rather game, what would you rather, what would you rather game">
     <meta name="author" content="WYR Menu">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rooms.css">
 </head>
 <body>
-    <button onclick="redirect('rooms')" class="rooms">Browse Rooms</button>
-    <div class="center">
-        <img src="images/logo.png" class="wyr">
-        <input class="code" placeholder="Room Code" maxlength="6" minlength="6">
-        <button class="create">Create Room</button>
+    <button onclick="redirect('index')" class="home">Home</button>
+    <div class="grid">
+        <div class="ntr">
+            <h1>Loading Rooms...</h1>
+        </div>
     </div>
-    <div class="left">
-        <h2>Play with friends</h2>
-    </div>
-    <div class="right">
-        <h2>Play with family</h2>
-    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
 </body>
 </html>

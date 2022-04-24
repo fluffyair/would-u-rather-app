@@ -34,8 +34,8 @@ function getRoomUsers(room) {
     return users.filter(user => user.room === room)    
 }
 
-setInterval(() => {
-    console.log(users);
-}, 2000)
+// setInterval(() => {
+//     console.log(users);
+// }, 2000)
 
 module.exports = { userJoin, getCurrentUser, getRoomUsers, userLeave, users };
