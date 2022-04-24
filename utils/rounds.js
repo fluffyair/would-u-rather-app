@@ -91,7 +91,7 @@ let questions = [
     'get mud on your shoes or get dog feces on your shoes',
     'take out the trash or take out the dog',
     'love someone or love your dog',
-    'get one wish from a genie or one gift',
+    'get one wish from a genie or get one gift from a genie',
     'skip school or skip church',
     'let people punch you or let people kick you',
     'change your height whenever you want or change your hair whenever you want',
